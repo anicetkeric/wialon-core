@@ -1,5 +1,6 @@
-package com.sdk.demo;
+package com.sdk.integration;
 
+import com.sdk.integration.shared.Constants;
 import com.sdk.wialon.core.Errors;
 import com.sdk.wialon.core.Session;
 import com.sdk.wialon.extra.SearchSpec;
@@ -23,10 +24,10 @@ public class Demo {
 	// Login to server
 	public void login(){
 		// initialize Wialon session
-		session.initSession("http://hst-api.wialon.com");
+		session.initSession(Constants.BASE_URL);
 		// trying login
 		// token use for https://sdk.wialon.com/playground/demo
-		session.loginToken("5dce19710a5e26ab8b7b8986cb3c49e58C291791B7F0A7AEB8AFBFCEED7DC03BC48FF5F8", new ResponseHandler() {
+		session.loginToken(Constants.TOKEN_APP, new ResponseHandler() {
 			@Override
 			public void onSuccess(String response) {
 				super.onSuccess(response);

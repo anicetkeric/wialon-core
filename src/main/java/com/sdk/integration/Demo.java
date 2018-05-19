@@ -93,7 +93,7 @@ public class Demo {
 				super.onSuccess(response);
 				// logout succeed
 				System.out.println("Logout successfully");
-				System.exit(0);
+				//System.exit(0);
 			}
 
 			@Override
@@ -101,7 +101,7 @@ public class Demo {
 				super.onFailure(errorCode, throwableError);
 				// logout failed, print error
 				System.out.println(Errors.getErrorText(errorCode));
-				System.exit(0);
+				//System.exit(0);
 			}
 		});
 	}
